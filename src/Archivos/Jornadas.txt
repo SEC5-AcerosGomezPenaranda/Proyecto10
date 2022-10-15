@@ -1,0 +1,7 @@
+nombre_jornada,fecha_p1,equipo1_p1,equipo2_p1,fecha_p2,equipo1_p2,equipo2_p2
+Jornada1,02-1-2018 06:00:00,PSG,RMD,02-1-2018 08:00:00,LIV,BAR 
+Jornada2,07-1-2018 06:00:00,RMD,LIV,07-1-2018 08:00:00,BAR,PSG
+Jornada3,15-1-2018 06:00:00,LIV,PSG,15-1-2018 08:00:00,BAR,RMD
+Jornada4,22-1-2018 06:00:00,RMD,PSG,22-1-2018 08:00:00,LIV,BAR
+
+ 
