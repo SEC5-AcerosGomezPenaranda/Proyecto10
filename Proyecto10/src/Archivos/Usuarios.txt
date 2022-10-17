@@ -1,0 +1,2 @@
+rol,usuario,contraseña
+administrador,admin,admin
