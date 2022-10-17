@@ -7,7 +7,7 @@ import java.util.Map;
 public class CalculadoraJugadores {
 	
 	private List<Jugador> jugadores;
-	private List<EquipoReal> equipos;
+	private static List<EquipoReal> equipos;
 	
 	public CalculadoraJugadores(Map<String, Jugador> jugadores, List<EquipoReal> elEquipo) {
 		this.jugadores = new ArrayList<Jugador>(jugadores.values());
@@ -18,7 +18,8 @@ public class CalculadoraJugadores {
 		return jugadores;
 	}
 	
-	public List<EquipoReal> getEquipos(){
+	public static List<EquipoReal> getEquipos(){
 		return equipos;
 	}
+
 }	

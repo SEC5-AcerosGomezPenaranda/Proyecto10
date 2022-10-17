@@ -1,5 +1,6 @@
 package modelo;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -11,13 +12,15 @@ public class Partido
 {
 	private EquipoReal local;
 	private EquipoReal visitante;
+	private Calendar fecha;
 	private ArrayList<EstadisticaJugador> desempeños;
 	
-	public Partido(EquipoReal elLocal, EquipoReal elVisitante, ArrayList<EstadisticaJugador> losDesempeños)
+	public Partido(EquipoReal elLocal, EquipoReal elVisitante, Calendar laFecha)
 	{
 		this.local = elLocal;
 		this.visitante = elVisitante;
-		this.desempeños = losDesempeños;
+		this.fecha = laFecha;
+		desempeños = new ArrayList<EstadisticaJugador>();
 	}
 	
 	
