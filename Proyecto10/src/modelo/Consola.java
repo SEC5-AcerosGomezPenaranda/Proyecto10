@@ -2,11 +2,16 @@ package modelo;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import uniandes.dpoo.taller0.modelo.Atleta;
+import uniandes.dpoo.taller0.modelo.Evento;
 
 
 
@@ -19,6 +24,9 @@ public class Consola
 	 */
 	private CalculadoraJugadores calculadoraJ;
 	private CalculadoraPartidos calculadoraP;
+	private CalculadoraPosiciones calculadoraPos;
+	private CalculadoraEstadistica calculadoraE;
+	private Lector lector;
 
 	/**
 	 * Ejecuta la aplicación: le muestra el menú al usuario y la pide que ingrese
@@ -27,7 +35,94 @@ public class Consola
 	 */
 	public void ejecutarAplicacion()
 	{
-		System.out.println("Estadísticas sobre los Juegos Olímpicos\n");
+
+			Map<String, Administrador> Admins = new HashMap<>();
+			Map<String, Participante> Partis = new HashMap<>();
+			
+			String rutaUsuarios = "Archivos/Usuarios.txt";
+			BufferedReader br = new BufferedReader(new FileReader(rutaUsuarios));
+			String linea = br.readLine();
+			linea = br.readLine();
+			
+			while (linea != null) {
+				String[] partes = linea.split(",");
+				String rol = partes[0];
+				String nombreUsuario = partes[1];
+				String pass = partes[2];
+				
+				if(rol.contentEquals("administrador"))
+				{
+					Administrador elAdmin = Admins.get(nombreUsuario);
+					if (elAdmin == null)
+					{
+						elAdmin = new Administrador(nombreUsuario, pass);
+						Admins.put(nombreUsuario, elAdmin);
+					}
+				}
+				else if(rol.contentEquals("participante")) {
+					Participante elParticipante = Partis.get(nombreUsuario);
+					if (elParticipante == null)
+					{
+						elParticipante = new Participante(nombreUsuario, pass);
+						Partis.put(nombreUsuario, elParticipante);
+					}
+				}
+		}
+		
+		
+		System.out.println("Futbol Fantasía\n");
+		String user = input("\nNombre de usuario: ");
+		String password = input("\nContraseña: ");
+		
+		
+	
+		Administrador adm = Admins.get(user);
+		Participante parti = Partis.get(user);
+
+		if (adm != null) {
+			String admi = adm.getNombreUsuario();
+			String contra = adm.getContrasena();
+			if (admi.equals(user) && contra.equals(password) ){
+				
+				
+			}
+			else {
+				while (!admi.equals(user) || !contra.equals(password))
+				System.out.println("Datos incorrectos. Intente nuevamente: ");
+				user = input("\nNombre de usuario: ");
+				password = input("\nContraseña: ");
+			}
+		
+		}
+		else if (parti != null) {
+			String partici = parti.getNombreUsuario();
+			String contra = parti.getContrasena();
+			if (partici.equals(user) && contra.equals(password) ){
+				
+				
+			}
+			else {
+				while (!partici.equals(user) || !contra.equals(password))
+				System.out.println("Datos incorrectos. Intente nuevamente: ");
+				user = input("\nNombre de usuario: ");
+				password = input("\nContraseña: ");
+			}
+		}
+		
+		
+		
+		
+		
+		
+		boolean sesion = true;
+		int opcion_seleccionada = Integer.parseInt(input("Por favor seleccione una opción"));
+		while (sesion)
+		{
+			try
+			{
+				
+			}
+		}
 
 		boolean continuar = true;
 		while (continuar)
@@ -69,6 +164,21 @@ public class Consola
 		System.out.println("1. Iniciar sesion como participante");
 		System.out.println("2. Iniciar sesion como administrador");
 		System.out.println("3. Salir");
+		
+	}
+	public void mostrarMenuParticipante()
+	{
+		System.out.println("\nOpciones de la aplicación\n");
+		System.out.println("1. Iniciar sesion como participante");
+		System.out.println("2. Iniciar sesion como administrador");
+		System.out.println("3. Salir");
+		
+	}
+	
+	//Muestra la pantalla de inicar sesion:
+	public void IniciarSesion()
+	{
+		System.out.println("\nIniciar Sesion\n");
 		
 	}
 
