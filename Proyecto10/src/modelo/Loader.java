@@ -13,8 +13,6 @@ import java.util.Map;
 
 public class Loader {
 	
-	
-	
 	public static CalculadoraJugadores cargarArchivo(String nombreArchivo) throws FileNotFoundException, IOException
 	{
 		Map<String, Jugador> jugadores = new HashMap<>();
@@ -48,6 +46,7 @@ public class Loader {
 			
 			
 			
+			//System.out.print(linea + "\n");
 			linea = br.readLine();
 		}
 		br.close();

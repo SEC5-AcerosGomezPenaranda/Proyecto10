@@ -6,7 +6,7 @@ public class Jugador
 	private String posicion;
 	private String equipo;
 	private int puntuacion;
-	private double valor;
+	private int valor;
 	private EstadisticaJugador estadisticasGlobales;
 	
 	public Jugador(String elNombre, String laPosicion, String elEquipo, int elValor) 
