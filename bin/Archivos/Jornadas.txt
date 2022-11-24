@@ -1,7 +1,11 @@
-nombre_jornada,fecha_p1,equipo1_p1,equipo2_p1,fecha_p2,equipo1_p2,equipo2_p2
-Jornada1,02-1-2018 06:00:00,PSG,RMD,02-1-2018 08:00:00,LIV,BAR 
-Jornada2,07-1-2018 06:00:00,RMD,LIV,07-1-2018 08:00:00,BAR,PSG
-Jornada3,15-1-2018 06:00:00,LIV,PSG,15-1-2018 08:00:00,BAR,RMD
-Jornada4,22-1-2018 06:00:00,RMD,PSG,22-1-2018 08:00:00,LIV,BAR
+nombre_jornada,anio,mes,dia,hora,min,sec,local,visitante
+Jornada1,118,1,2,6,0,0,PSG,RMD
+Jornada1,118,1,2,8,0,0,,LIV,BAR 
+Jornada2,118,1,7,6,0,0,,RMD,LIV
+Jornada2,118,1,7,8,0,0,,BAR,PSG
+Jornada3,118,1,15,6,0,0,,LIV,PSG
+Jornada3,118,1,15,8,0,0,,BAR,RMD
+Jornada4,118,1,22,6,0,0,,RMD,PSG
+Jornada4,118,1,22,8,0,0,,LIV,BAR
 
  

@@ -1,4 +1,5 @@
 package modelo;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -13,8 +14,9 @@ public class Alineacion {
 	private ArrayList<Jugador> volantes;
 	private ArrayList<Jugador> defensas;
 	private Jugador arquero;
-	
-	public Alineacion(Jugador elCapitan, ArrayList<Jugador> losDelanteros, ArrayList<Jugador> losVolantes, ArrayList<Jugador> losDefensas, Jugador elArquero) {
+
+	public Alineacion(Jugador elCapitan, ArrayList<Jugador> losDelanteros, ArrayList<Jugador> losVolantes,
+			ArrayList<Jugador> losDefensas, Jugador elArquero) {
 		this.capitan = elCapitan;
 		this.delanteros = losDelanteros;
 		this.volantes = losVolantes;
@@ -22,5 +24,4 @@ public class Alineacion {
 		this.arquero = elArquero;
 	}
 
-		
 }

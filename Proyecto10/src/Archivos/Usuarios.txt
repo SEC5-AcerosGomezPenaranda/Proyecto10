@@ -1,3 +1,0 @@
-rol,usuario,contraseña
-administrador,admin,admin
-participante,yo,1234
