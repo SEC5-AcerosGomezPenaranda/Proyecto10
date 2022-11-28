@@ -1,0 +1,9 @@
+﻿nombre_jornada,anio,mes,dia,hora,min,sec,local,visitante
+Jornada1,118,1,2,6,0,0,PSG,RMD
+Jornada1,118,1,2,8,0,0,LIV,BAR
+Jornada2,118,1,7,6,0,0,RMD,LIV
+Jornada2,118,1,7,8,0,0,BAR,PSG
+Jornada3,118,1,15,6,0,0,LIV,PSG
+Jornada3,118,1,15,8,0,0,BAR,RMD
+Jornada4,118,1,22,6,0,0,RMD,PSG
+Jornada4,118,1,22,8,0,0,LIV,BAR
